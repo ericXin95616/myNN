@@ -43,5 +43,6 @@ private:
     MatrixXd dat_pts; // row is the number of features, col == trn_set_size
     VectorXd dat_labels; // len == trn_set_size
     vector<Layer> layers;
+    vector<double> losses;
 };
 #endif //MYNN_NN_H

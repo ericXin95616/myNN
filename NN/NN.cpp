@@ -3,16 +3,13 @@
 //
 #include "NN.h"
 
-class Layer{
-public:
-    Layer(unsigned int output_dim, unsigned int input_dim, ActiveFnc);
-private:
-    unsigned int out_dim;
-    unsigned int in_dim;
-    ActiveFnc act_fnc;
-    MatrixXd weights;
-};
+Layer::Layer(unsigned int output_dim, unsigned int input_dim, ActiveFnc) {
 
+}
+
+NN::NN() {
+
+}
 /**
  * Add a layer in neural network.
  * The input dimension of the layer should match the output dimension of the previous layer.
@@ -42,27 +39,35 @@ void NN::train(const vector<vector<int>> &examples, const vector<int> &labels, u
 }
 
 /**
- * 
- * @param unlabeled
- * @return
+ * Predict label based on the neural network we just train.
+ *
+ * @param unlabeled unseen data points
+ * @return predictions of those unseen data points
+ * @throws std::runtime_error if the number of features of @unlabled does not match @data_pts
  */
 vector<int> NN::predict(const vector<vector<int>> &unlabeled) {
 
 }
 
-const vector<double> &NN::getLoss() {
+/**
+ * Get the value of loss function for each iterations.
+ * Needed for visualization.
+ *
+ * @return @losses
+ */
+const vector<double>& NN::getLoss() {
 
 }
 
 /**
- *
+ * Forward propagation
  */
 void NN::forward() {
 
 }
 
 /**
- *
+ * Backward propagation
  */
 void NN::backward() {
 

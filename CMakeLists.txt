@@ -8,10 +8,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # add library NN
 add_subdirectory(NN)
+add_subdirectory(matplotplusplus)
 
 add_executable("${TARGET}" MNIST_test.cpp)
 
-target_link_libraries("${TARGET}" PUBLIC NN)
+target_link_libraries("${TARGET}" PUBLIC NN matplot)
+
 target_include_directories("${TARGET}" PUBLIC
         "${PROJECT_SOURCE_DIR}/NN"
         )

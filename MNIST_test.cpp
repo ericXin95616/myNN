@@ -11,6 +11,7 @@
 #include <filesystem>
 
 #include "Eigen/Dense"
+#include <matplot/matplot.h>
 
 #define NUM_FEATURES 64
 
